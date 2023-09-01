@@ -1,0 +1,31 @@
+/***Create a databse for a Specialized Road Bikes Store, selling 15 bike types, varying by model, size, quantity and Cost***/
+
+CREATE TABLE Specialized_Bikes (ID INTEGER PRIMARY KEY, Model TEXT, Size TEXT, Quantity INTEGER, Cost INTEGER, Quality TEXT);
+
+INSERT INTO Specialized_Bikes VALUES (1, 'Allez', 'S', 10, 1600, 'Entry Level');
+INSERT INTO Specialized_Bikes VALUES (2, 'Allez', 'M', 12, 1600, 'Entry Level');
+INSERT INTO Specialized_Bikes VALUES (3, 'Diverge E5', 'S', 10, 2000, 'Entry Level');
+INSERT INTO Specialized_Bikes VALUES (4, 'Diverge E5', 'M', 15, 2000, 'Entry Level');
+INSERT INTO Specialized_Bikes VALUES (5, 'Diverge E5', 'L', 5, 2000, 'Entry Level');
+INSERT INTO Specialized_Bikes VALUES (6, 'Crux Comp', 'M', 10, 5300, 'Mid Level');
+INSERT INTO Specialized_Bikes VALUES (7, 'Aethos', 'M', 8, 9300, 'Mid Level');
+INSERT INTO Specialized_Bikes VALUES (8, 'Crux Expert', 'S', 7, 9200, 'Mid Level');
+INSERT INTO Specialized_Bikes VALUES (9, 'Diverge Expert', 'L', 5, 8900, 'Mid Level');
+INSERT INTO Specialized_Bikes VALUES (10, 'Diverge Expert', 'M', 10, 8900, 'Mid Level');
+INSERT INTO Specialized_Bikes VALUES (11, 'Crux Pro', 'M', 12, 12000, 'High Level');
+INSERT INTO Specialized_Bikes VALUES (12, 'Aethos Pro', 'L', 10, 12300, 'High Level');
+INSERT INTO Specialized_Bikes VALUES (13, 'Aethos Pro', 'M', 8, 12300,'High Level');
+INSERT INTO Specialized_Bikes VALUES (14, 'Tarmac Pro', 'S', 12, 11000, 'High Level');
+INSERT INTO Specialized_Bikes VALUES (15, 'Tarmac Pro', 'M', 15, 11000, 'High Level');
+
+-- Display the full inventory of the bike store
+SELECT * FROM Specialized_Bikes;
+
+-- Display the maximum cost of each model
+SELECT Model, max(cost) as Max_Cost
+FROM Specialized_Bikes
+Group by Model;
+
+
+
+
